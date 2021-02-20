@@ -784,9 +784,8 @@ fluent-bit:
 
     [INPUT]
       Name             tail
+      Parser           crio
       Path             /var/log/containers/*.log
-      Multiline        On
-      Parser_Firstline multi_line
       Tag              containers.*
       Refresh_Interval 1
       Rotate_Wait      60
